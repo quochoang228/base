@@ -1,9 +1,9 @@
-import 'package:base/feature/example/ui/page/example_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../app/coordinator.dart';
+import '../feature/root/ui/page/root_page.dart';
+import '../feature/splash/ui/page/splash_page.dart';
 import 'paths.dart';
-
 
 final goRouterConfiguration = GoRouter(
   initialLocation: Paths.splash,
@@ -14,7 +14,12 @@ final goRouterConfiguration = GoRouter(
     ///========== start =========//
     GoRoute(
       path: Paths.splash,
-      builder: (context, state) => const ExamplePage(),
+      builder: (context, state) => const SplashPage(),
+    ),
+
+    GoRoute(
+      path: Paths.root,
+      builder: (context, state) => const RootPage(),
     ),
   ],
 );
@@ -43,7 +48,11 @@ class FadeTransitionPage extends CustomTransitionPage<void> {
     required LocalKey super.key,
     required super.child,
   }) : super(
-            transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) => FadeTransition(
+            transitionsBuilder: (BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondaryAnimation,
+                    Widget child) =>
+                FadeTransition(
                   opacity: animation.drive(_curveTween),
                   child: child,
                 ));

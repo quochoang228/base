@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -7,8 +6,6 @@ import 'package:uuid/uuid.dart';
 import '../env/env.dart';
 import '../logs/log_interceptor.dart';
 import '../logs/log_utils.dart';
-
-
 
 const uuid = Uuid();
 
@@ -37,7 +34,7 @@ class BaseClient {
         url,
         queryParameters: queryParameters,
         cancelToken: cancelToken,
-        options : options,
+        options: options,
       );
 
   Future<Response<T>> post<T>(
@@ -52,7 +49,7 @@ class BaseClient {
         queryParameters: queryParameters,
         data: data,
         cancelToken: cancelToken,
-         options : options,
+        options: options,
       );
 
   Future<Response<T>> put<T>(
@@ -67,7 +64,7 @@ class BaseClient {
         queryParameters: queryParameters,
         data: data,
         cancelToken: cancelToken,
-         options : options,
+        options: options,
       );
 
   Future<Response<T>> delete<T>(
@@ -85,43 +82,28 @@ class BaseClient {
 
   static BaseOptions get _options {
     return BaseOptions(
-      baseUrl: Env.baseUrl, // TODO : change baseUrl
-      receiveDataWhenStatusError: true,
-      followRedirects: true,
-      maxRedirects: 100,
-      contentType: Headers.jsonContentType,
-      responseType: ResponseType.json,
-      connectTimeout: const Duration(seconds: 30),
-      receiveTimeout: const Duration(seconds: 30),
-      headers: {
-
-      }
-    );
+        baseUrl: Env.baseUrl,
+        receiveDataWhenStatusError: true,
+        followRedirects: true,
+        maxRedirects: 100,
+        contentType: Headers.jsonContentType,
+        responseType: ResponseType.json,
+        connectTimeout: const Duration(seconds: 30),
+        receiveTimeout: const Duration(seconds: 30),
+        headers: {});
   }
 
   static QueuedInterceptorsWrapper get _interceptor {
     return QueuedInterceptorsWrapper(
-      onRequest: (options, handler) async{
-
-        //TODO : Interceptors on request
-        // final localUser = await appLocator<AuthenticationRepository>().localUser;
-        //
-        // String? deviceId = await AppInfoHelper.getDeviceId();
-        //
-        // if(localUser.isNotEmpty){
-        //   Map<String, dynamic> user = jsonDecode(localUser);
+      onRequest: (options, handler) async {
+        // final localUser = await appLocator<ProfileRepository>().fetchUserLocal();
+        // if (localUser.isNotEmpty) {
         //   var customHeaders = {
-        //     'Authorization': "Bearer ${user["token"]}"
-        //     // other headers
+        //     'Authorization': "Bearer $localUser",
+        //     "clientMessageId": uuid.v1(),
         //   };
         //   options.headers.addAll(customHeaders);
         // }
-        options.headers.addAll({
-          "clientMessageId": uuid.v1(),
-        });
-        // options.headers.addAll({
-        //   "deviceId": deviceId,
-        // });
         return handler.next(options);
       },
       onError: (

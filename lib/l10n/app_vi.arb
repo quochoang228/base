@@ -1,6 +1,182 @@
 {
-    "appName": "Base App",
+    "appName": "Hệ thống Kho - Tài sản",
     "example": "Example App",
+
+    "warehouse": "Kho",
+    "asset": "Tài sản",
+    "notification": "Thông báo",
+    "profile": "Cá nhân",
+    
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    
+    "registerMsg": "Vui lòng nhập số điện thoại bạn muốn dùng để đăng ký tài khoản. OTP sẽ được gửi đến số điện thoại của bạn.",
+    "registerPhone": "Số điện thoại",
+    "registerPhoneHint": "Nhập số điện thoại",
+    "registerOTP": "OTP",
+    
+
+
+    "logout": "Đăng xuất",
+    "logoutTitle": "Xác nhận đăng xuất",
+    "logoutMsg": "Bạn có chắc chắn muốn đăng xuất tài khoản?",
+    "deleteAccount": "Xóa tài khoản",
+    "deleteAccountTitle": "Xác nhận xóa tài khoản",
+    "deleteAccountMsg": "Bạn có chắc chắn muốn xóa tài khoản? Tài khoản không thể khôi phục sau khi xóa",
+
+
+    "buttonLogin": "Đăng nhập",
+    "buttonRegister": "Đăng ký",
+    "buttonConfirm": "Xác nhận",
+    "buttonReject": "Từ chối",
+    "buttonSearch": "Tìm kiếm",
+    "buttonApprove": "Phê duyệt",
+    "buttonApproveMsgSuccess": "Phê duyệt thành công",
+    "buttonApproveMsgErr": "Phê duyệt thất bại",
+    "buttonCancel": "Hủy",
+    "buttonRecord": "Ghi lại",
+    "buttonSave": "Lưu",
+    "buttonSend": "Gửi",
+    "buttonLogout": "Đăng xuất",
+    "buttonSaveMsgSuccess": "Lưu thành công",
+    "buttonSaveMsgErr": "Lưu thất bại",
+    "buttonDeleteAccount": "Xóa tài khoản",
+    "buttonSendOTP": "Gửi OTP",
+    "buttonSendOTPMsgSuccess": "Đã gửi OTP thành công",
+    "buttonReadyAccount": "Đã có tài khoản? Đăng nhập",
+
+
+    "importWarehouse": "Nhập kho",
+    "writeTicketImport_warehouse": "Viết phiếu và thực nhập",
+    "exportWarehouse": "Xuất kho",
+    "writeTicketExportWarehouse": "Viết phiếu xuất kho",
+    "actualExportWareHouse": "Thực xuất kho",
+    "confirmTicketExportWareHouse": "Xác nhận phiếu xuất kho",
+    "employeeWarehouseApproval": "Duyệt xuất kho nhân viên",
+    "updateConstructionMaterials": "Cập nhật vật tư thi công",
+
+    "inventory": "Tồn kho",
+    "inventoryInformation": "Xem thông tin tồn kho",
+    "inventoryInformationCheck": "Thông tin check tồn",
+    "selectWarehouseLevel": "Chọn cấp kho",
+    "selectWarehouseType": "Chọn loại kho",
+
+
+    "accounting": "Kiểm kê",
+    "wareHouseAccounting": "Kiểm kê kho",
+    "chooseWareHouseLevel": "Chọn cấp kho",
+    "chooseWareHouseType": "Chọn loại kho",
+    "wareHouseCode": "Mã kho",
+    "wareHouseGoods": "Hàng hóa",
+
+
+    "inventoryQuantity": "Số lượng:",
+    "inventoryGoodsCode": "Mã hàng:",
+    "inventoryPrice": "Đơn giá (VNĐ):",
+    "inventoryStatus": "Tình trạng:",
+    "inventoryStateGood": "Tốt",
+    "inventoryStateBroken": "Hỏng",
+    "inventoryViewSerial": "Xem serial",
+    "inventorySerialDetail": "Chi tiết serial",
+    "inventorySearchWarehouse": "Tìm kiếm mã kho",
+    "inventorySearchGoods": "Tìm kiếm mã hàng hóa",
+
+    "stockTransExportCode": "Mã PXK: {code}",
+    "@stockTransEmployeeExportCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "stockTransEmployeeListGoods": "Danh sách hàng hóa",
+    "stockTransEmployeeExportWarehouse": "Kho xuất:",
+    "stockTransEmployeeReceivingWarehouseCode": "Mã kho nhận:",
+    "stockTransEmployeeReceiver": "Người nhận:",
+    "stockTransEmployeeDateCreated": "Ngày tạo:",
+    "stockTransEmployeeStatus": "Trạng thái:",
+    "stockTransEmployeeExportStatusAll": "Tất cả",
+    "stockTransEmployeeExportStatusPending": "Chờ duyệt",
+    "stockTransEmployeeExportStatusApproved": "Đã duyệt",
+    "stockTransEmployeeExportStatusConfirm": "Đã xác nhận",
+    "stockTransEmployeeExportStatusNotConfirm": "Chưa xác nhận",
+    "stockTransEmployeeExportStatusRefuseApproval": "Từ chối duyệt",
+    "stockTransEmployeeExportStatusCreationTime": "Thời gian tạo",
+    "exportWarehouseDetail": "Chi tiết phiếu xuất kho",
+    "exportWarehouseRefuseApproval": "Từ chối phê duyệt",
+    "exportWarehouseReasonForRefusal": "Lý do từ chối",
+    "searchExportWarehouse": "Tìm kiếm mã phiếu, mã/tên kho",
+
+
+    "constructionMaterialsUpdate": "Cập nhật vật tư thi công",
+    "searchConstructionMaterialsUpdate": "Tìm kiếm theo mã phiếu xuất",
+    "constructionMaterialsUpdateStatusAll": "Tất cả",
+    "constructionMaterialsUpdateStatusNotUpdate": "Chưa cập nhật",
+    "constructionMaterialsUpdateStatusUpdated": "Đã cập nhật",
+    "constructionMaterialsUpdateStatus": "Trạng thái:",
+    "constructionMaterialsUpdateDateCreated": "Ngày tạo:",
+    "constructionMaterialContractCode": "Mã hợp đồng:",
+    "constructionMaterialConstructionCode": "Mã công trình:",
+    "constructionMaterialExportTicketCode": "Mã phiếu xuất:",
+    "constructionMaterialActualDateOfExport": "Ngày thực xuất:",
+    "constructionMaterialReceiver": "Người nhận hàng:",
+    "constructionMaterialListGoods": "Danh sách hàng hóa",
+    "constructionMaterialQuantityZero": "Số lượng không được nhỏ hơn 0",
+    "constructionMaterialQuantityInvalid": "Số lượng không hợp lệ",
+    "constructionMaterialQuantityNonSet": "Vui lòng chọn số lượng",
+
+
+    "ticketExportWarehouseList": "Danh sách lệnh xuất kho",
+    "ticketExportWarehouseSearch": "Tìm kiếm theo mã lệnh xuất",
+    "ticketExportWarehouseDetail": "Chi tiết phiếu xuất kho",
+    "ticketExportWarehouseDetailStatusAll": "Tất cả",
+    "ticketExportWarehouseDetailStatusCreatedTicket": "Đã tạo phiếu",
+    "ticketExportWarehouseDetailStatusNotYetTicket": "Chưa tạo phiếu",
+    "ticketExportWarehouseDetailStatusSign": "Trạng thái ký",
+    "btnTicketExportWriteVotes": "Viết phiếu",
+    "btnTicketExportReject": "Từ chối xuất kho",
+    "actuallyExportWarehouseList": "Danh sách lệnh chờ xuất",
+    "actuallyExportWarehouseSearch": "Tìm kiếm theo mã lệnh xuất",
+    "actuallyExportWarehouseDetailStatusAll": "Tất cả",
+    "actuallyExportWarehouseDetailStatusWait": "Chờ xuất",
+    "actuallyExportWarehouseDetailStatusExported": "Đã xuất",
+    "btnActuallyExport": "Thực xuất",
+    "btnActuallyExportReject": "Từ chối xuất",
+    "btnExportWarehouseSign": "Trình ký",
+    "exportWarehouseSign": "Trình ký phiếu xuất kho",
+    "exportWarehouseSignedFoot": "Danh sách chân ký",
+    "exportWarehouseSigner": "Người ký",
+    "exportWarehouseSignRole": "Vai trò",
+
+
+
+    "goodsCode": "Mã sản phẩm",
+    "goodsPrice": "Đơn giá (VNĐ):",
+    "goodsLostQuantity": "Số lượng mất:",
+    "goodsRecallsQuantity": "Số lượng thu hồi:",
+    "goodsConstructionQuantity": "Số lượng thi công:",
+    "goodsConstructionChooseSerial": "Chọn serial",
+    "goodsConstructionSerial": "Danh sách serial",
+
+
+    "totalTicket": "{total} phiếu",
+    "@totalTicket": {
+        "placeholders": {
+            "total": {
+                "type": "int"
+            }
+        }
+    },
+    "detail": "Chi tiết",
+    "generalInformation": "Thông tin chung",
+
+
+
+
+
+
+
+
 
     "end": "end"
 }

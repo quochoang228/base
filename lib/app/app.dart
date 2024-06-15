@@ -1,3 +1,4 @@
+import 'package:base_ui/base_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -10,8 +11,13 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
-      // TODO : set theme for
       // theme: lightThemeData,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: BaseColors.backgroundWhite,
+          scrolledUnderElevation: 0.0,
+        )
+      ),
       builder: (context, child) {
         final MediaQueryData data = MediaQuery.of(context);
         return MediaQuery(

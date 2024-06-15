@@ -1,9 +1,9 @@
-import 'package:base/env/env.dart';
-import 'package:base/feature/example/data/models/news.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../../constant/data_state.dart';
 import '../../../../di/locator.dart';
+import '../../../../env/env.dart';
+import '../../data/models/news.dart';
 import '../../data/repository/example_repository.dart';
 
 final testProvider = StateProvider((ref) => 'testProvider');

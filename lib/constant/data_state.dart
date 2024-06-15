@@ -47,9 +47,9 @@ class NoData<T> extends DataSate<T> {
 }
 
 class Failed<T> extends DataSate<T> {
-  final Object error;
+  final Object err;
 
-  Failed(this.error) : super(state: State.failed, error: error);
+  Failed(this.err) : super(state: State.failed, error: err);
 }
 
 enum State {

@@ -1,46 +1,28 @@
 abstract class Paths {
   static const String splash = '/';
-  /// auth
-  static const String login = '/login';
-  static const String register = '/register';
-  static const String confirmOTP = '/confirm-otp';
-  /// root
   static const String root = '/root';
 
-  static const String webView = '/web-view';
+  static const String login = '/login';
+  static const String register = '/register';
 
 
-  static const String accountSetting = '/account-setting';
-  static const String accountInformation = '/account-info';
-  static const String editAccountInformation = '/edit-account-info';
-  static const String changePassword = '/change-password';
-  static const String forgotPassword = '/forgot-password';
 
-  /// service
-  static const services = '/services';
-  static const serviceDetail = ':serviceVariantId';
-
-  /// cart
-  static const myCart = '/my-cart';
-
-  /// order
-  static const newOrder = '/new-order';
-  static const editCustomerInfo = '/edit-customer-info';
-  static const updateCustomerInfo = '/update-customer-info';
-  static const orderSuccess = '/order-success';
-  static const orderChecklist = '/order-checklist';
-  static const orderHistory = '/order-history';
-  static const orderNewReview = '/order-new-review';
-  static const String addOrderItem = '/add-order-item';
-
-  static const orders = '/orders';
-  static const orderId = ':orderId';
+  static const ticketExportWareHouse = '/ticket-export-ware-house';
+  static const ticketExportWareHouseDetail = '/ticket-export-ware-house-detail';
+  static const actuallyExportWareHouse = '/actually-export-ware-house';
+  static const actuallyExportWareHouseDetail = '/actually-export-ware-house-detail';
+  static const exportWarehouseSign = '/export-ware-house-sign';
 
 
-  /// address
-  static const String addressLocationSelect = '/address-location-select';
+  static const inventory = '/inventory';
+  static const inventorySerial = '/inventory-detail';
 
-  /// technician
-  static const String technicians = '/technicians';
-  static const String technicianId = ':technicianId';
+  static const stockTransEmployee = '/stock-trans-employee';
+  static const stockTransEmployeeDetail = '/stock-trans-employee-detail';
+
+
+  static const constructionMaterials = '/construction-materials';
+  static const constructionMaterialDetail = '/construction-material-detail';
+  static const confirmTicketExportWareHouse = '/confirm_ticket_export_ware_house';
+  static const confirmTicketExportWareHouseDetail = '/confirm_ticket_export_ware_house_detail';
 }

@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:persistent_storage/persistent_storage_core.dart';
 
 import '../di/locator.dart';
 
@@ -16,9 +17,8 @@ Future<void> bootstrap({required Widget app}) async {
     // set style UI system
     setSystemUI();
 
-    // TODO : init Persistent Storage
     // Dependencies local storage
-    // await PersistentStorageCore.init();
+    await PersistentStorageCore.init();
 
     // Dependencies - GetIt
     injectorApp();

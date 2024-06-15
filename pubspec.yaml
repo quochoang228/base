@@ -28,6 +28,14 @@ dependencies:
   uuid: ^4.4.0
   flutter_svg: ^2.0.10+1
 
+  flutter_zoom_drawer: ^3.2.0
+  flutter_screenutil: ^5.9.1
+  base_ui:
+    git: "http://10.248.242.236/mobile/base_ui.git"
+  persistent_storage:
+    path: packages/storage/persistent_storage
+  waterfall_flow: ^3.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

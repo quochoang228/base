@@ -1,8 +1,8 @@
-import 'package:base/feature/example/data/models/news.dart';
 
 import '../../../../client/base_repository.dart';
 import '../../../../client/base_result.dart';
 import '../api/example_api.dart';
+import '../models/news.dart';
 
 abstract class ExampleRepository {
   Future<BaseResult<NewsResponse>> getNewsEverything(Map<String, dynamic> queryParameters);

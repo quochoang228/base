@@ -9,7 +9,6 @@ void main() {
   //   // DO NOT share ProviderContainers between tests.
   //   final container = createContainer();
   //
-  //   // TODO: use the container to test your application.
   //   expect(
   //    container.read(categoryProvider),
   //     NotLoaded<List<CategoryDto>>(),
